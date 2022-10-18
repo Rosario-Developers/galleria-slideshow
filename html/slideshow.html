@@ -14,22 +14,26 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./slideshow.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/slideshow.css" />
     <title>Paint Name</title>
   </head>
   <body>
     <nav class="navbar">
       <h1 class="logo">galleria.</h1>
-      <a class="start-stop-button" href="./">stop slideshow</a>
+      <a class="start-stop-button" href="../index.html">stop slideshow</a>
     </nav>
     <main class="slideshow-container">
-      <div class="paint">
+      <div class="paint-container">
         <img
           class="painting"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/700px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
           alt=""
         />
+        <div class="name">
+          <h2>Starry Nigth</h2>
+          <h4>Vincent Van Gogh</h4>
+        </div>
         <button
           class="show-img-btn"
           onclick="window.open('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/700px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg')"
