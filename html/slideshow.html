@@ -19,54 +19,62 @@
     <title>Paint Name</title>
   </head>
   <body>
-    <nav class="navbar">
-      <h1 class="logo">galleria.</h1>
-      <a class="start-stop-button" href="../index.html">stop slideshow</a>
-    </nav>
-    <main class="slideshow-container">
-      <div class="paint-container">
-        <img
-          class="painting"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/700px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
-          alt=""
-        />
-        <div class="name">
-          <h2>Starry Nigth</h2>
-          <h4>Vincent Van Gogh</h4>
+    <div class="page-container">
+      <nav class="navbar">
+        <h1 class="logo">Galleria.</h1>
+        <a class="start-stop-button" href="../index.html">stop slideshow</a>
+      </nav>
+      <main class="slideshow-container">
+        <div class="paint-container"> 
+          <img
+            class="painting"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/700px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
+            alt=""
+          />
+          <img
+            class="author_image"
+            src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg"
+            alt=""
+          />
+          <div class="paint-name-container">
+            <h2>Starry Nigth</h2>
+            <h4>Vincent Van Gogh</h4>
+          </div>
+  
+          <button
+            class="show-img-btn"
+            onclick="window.open('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/700px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg')"
+          >
+            View image
+          </button>
         </div>
-        <button
-          class="show-img-btn"
-          onclick="window.open('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/700px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg')"
-        >
-          View image
-        </button>
-      </div>
-      <article class="paint-info">
-        <h1 class="year">1889</h1>
-        Although The Starry Night was painted during the day in Van Gogh's
-        ground-floor studio, it would be inaccurate to state that the picture
-        was painted from memory. The view has been identified as the one from
-        his bedroom window, facing east, a view which Van Gogh painted
-        variations of no fewer than twenty-one times,[citation needed] including
-        The Starry Night. "Through the iron-barred window," he wrote to his
-        brother, Theo, around 23 May 1889, "I can see an enclosed square of
-        wheat ... above which, in the morning, I watch the sun rise in all its
-        glory."
-      </article>
-    </main>
-    <footer class="footer">
-      <div>
-        <h2 class="paint-name">The Starry Night</h2>
-        <h3 class="paint-author">Vincent van Gogh</h3>
-      </div>
-      <div class="navegation-buttons">
-        <button>
-          <span class="material-symbols-outlined"> navigate_before </span>
-        </button>
-        <button>
-          <span class="material-symbols-outlined"> navigate_next </span>
-        </button>
-      </div>
-    </footer>
+        <article class="paint-info">
+          <h1 class="year">1889</h1>
+          Although The Starry Night was painted during the day in Van Gogh's
+          ground-floor studio, it would be inaccurate to state that the picture
+          was painted from memory. The view has been identified as the one from
+          his bedroom window, facing east, a view which Van Gogh painted
+          variations of no fewer than twenty-one times,[citation needed] including
+          The Starry Night. "Through the iron-barred window," he wrote to his
+          brother, Theo, around 23 May 1889, "I can see an enclosed square of
+          wheat ... above which, in the morning, I watch the sun rise in all its
+          glory."
+        </article>
+      </main>
+      <footer class="footer">
+        <div>
+          <h2 class="paint-name">The Starry Night</h2>
+          <h3 class="paint-author">Vincent van Gogh</h3>
+        </div>
+        <div class="navegation-buttons">
+          <button>
+            <span class="material-symbols-outlined"> navigate_before </span>
+          </button>
+          <button>
+            <span class="material-symbols-outlined"> navigate_next </span>
+          </button>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
