@@ -1,18 +1,59 @@
 /* Main */
 
+html,body{
+  min-height: 100vh;
+  width: 100%;
+}
+
+.page-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+nav{
+  flex: 0 1 auto;
+}
+
+main{
+  flex: 1 1 auto;
+}
+
+footer{
+  flex: 0 1 auto;
+}
+
 .slideshow-container {
   display: flex;
   margin: 2rem;
 }
 
 .paint-info {
-  padding: 2rem;
+  padding: 7rem;
   position: relative;
+  flex-basis: 35%;
+  line-height:2.5rem;
+  display:grid;
+  place-items:center;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-style: italic;
+  color:rgb(144, 144, 144);
 }
 
 .paint-container {
   position: relative;
-  height: fit-content;
+  display:flex;
+  align-items:flex-end;
+  flex-basis: 65%;
+}
+
+.painting{
+  height: 100%;
+  width: 60%;
+  object-fit: cover;
 }
 
 .show-img-btn {
@@ -28,21 +69,46 @@
 
 .year {
   position: absolute;
-  top: 0%;
-  right: 10%;
-  font-size: 140px;
-  color: rgba(20, 20, 20, 0.267);
+  top: 5%;
+  right: 20%;
+  font-size: 200px;
+  color: rgba(20, 20, 20, 0.05);
 }
 
-.name {
+.paint-name-container {
   background-color: whitesmoke;
-  position: absolute;
-  font-size: 30px;
+  position: absolute; 
   z-index: 2;
   right: 0;
   top: 0;
-  transform: translate(50%, -50%);
+  padding: 56px;
+  transform: translate(-10%, -20%);
+  max-width:300px;
 }
+
+.paint-name-container h2{
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 4.5rem;
+  text-transform: capitalize;
+}
+
+.paint-name-container h4{
+  margin-top: 1rem;
+  color:rgba(204, 204, 204);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 2rem;
+  text-transform: capitalize;
+}
+
+.author_image{
+  width: 100px;
+  height: 100px;
+  transform: translate(5%, -0%);
+  padding: 20px;
+}
+
 
 /* Footer */
 
@@ -68,4 +134,12 @@
   font-size: 1.2rem;
   color: rgba(0, 0, 0, 0.8);
   margin: 1rem;
+}
+
+
+/* Media Queries */
+@media (max-width:1200px){
+  .slideshow-container{
+    flex-direction: column;
+  }
 }
