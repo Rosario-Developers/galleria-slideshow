@@ -1,26 +1,27 @@
 /* Main */
 
-html,body{
+html,
+body {
   min-height: 100vh;
   width: 100%;
 }
 
-.page-container{
+.page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
 }
 
-nav{
+nav {
   flex: 0 1 auto;
 }
 
-main{
+main {
   flex: 1 1 auto;
 }
 
-footer{
+footer {
   flex: 0 1 auto;
 }
 
@@ -33,27 +34,33 @@ footer{
   padding: 7rem;
   position: relative;
   flex-basis: 35%;
-  line-height:2.5rem;
-  display:grid;
-  place-items:center;
+  line-height: 2.5rem;
+  display: grid;
+  place-items: center;
   font-size: 1.2rem;
   text-transform: capitalize;
   font-weight: 500;
   font-style: italic;
-  color:rgb(144, 144, 144);
+  color: rgb(144, 144, 144);
 }
 
 .paint-container {
   position: relative;
-  display:flex;
-  align-items:flex-end;
-  flex-basis: 65%;
+  display: flex;
+  align-items: flex-end;
 }
 
-.painting{
+.painting-container {
+  position: relative;
+  overflow: hidden;
+  flex-basis: 75%;
   height: 100%;
-  width: 60%;
+}
+
+.painting {
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .show-img-btn {
@@ -77,38 +84,47 @@ footer{
 
 .paint-name-container {
   background-color: whitesmoke;
-  position: absolute; 
+  position: absolute;
   z-index: 2;
-  right: 0;
+  right: -10%;
+  left: 60%;
   top: 0;
   padding: 56px;
   transform: translate(-10%, -20%);
-  max-width:300px;
+  max-width: 300px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-.paint-name-container h2{
+#paint-name {
   font-size: 4rem;
   font-weight: 600;
   line-height: 4.5rem;
   text-transform: capitalize;
 }
 
-.paint-name-container h4{
+#paint-author {
   margin-top: 1rem;
-  color:rgba(204, 204, 204);
+  color: rgba(204, 204, 204);
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 2rem;
   text-transform: capitalize;
 }
 
-.author_image{
+.author_image {
   width: 100px;
   height: 100px;
   transform: translate(5%, -0%);
   padding: 20px;
 }
 
+.zoom {
+  transition: transform 0.2s ease-in;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
+}
 
 /* Footer */
 
@@ -120,26 +136,50 @@ footer{
   border-top: 1px solid rgba(204, 204, 204, 0.509);
 }
 
-.paint-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.paint-author {
-  font-size: 0.8rem;
-  font-weight: 400;
-}
-
 .material-symbols-outlined {
   font-size: 1.2rem;
   color: rgba(0, 0, 0, 0.8);
   margin: 1rem;
 }
 
-
 /* Media Queries */
-@media (max-width:1200px){
-  .slideshow-container{
+@media (max-width: 1200px) {
+  .slideshow-container {
     flex-direction: column;
+  }
+
+  .paint-name-container {
+    padding: 20px;
+    right: 0;
+    left: 50%;
+  }
+
+  #paint-name {
+    font-size: 2.8rem;
+    font-weight: 600;
+  }
+
+  #paint-author {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 768px) {
+  .paint-name-container {
+    padding: 20px;
+    right: 20%;
+    left: 2rem;
+    top: 90%;
+  }
+
+  #paint-name {
+    font-size: 2.8rem;
+    font-weight: 600;
+  }
+
+  #paint-author {
+    font-size: 1.2rem;
+    font-weight: 400;
   }
 }
